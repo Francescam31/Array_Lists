@@ -8,20 +8,29 @@ public class Runner {
 
 //        SCOTTISH ISLANDS
         List<String> scottishIslands = new ArrayList<>();
+        scottishIslands.add("Tiree");
         scottishIslands.add("Jura");
+        scottishIslands.add("Islay");
         scottishIslands.add("Mull");
         scottishIslands.add("Skye");
         scottishIslands.add("Arran");
         scottishIslands.add("Tresco");
+        scottishIslands.add("Coll");
 
 //        1. Add "Coll" to the end of the list
 //        2. Add "Tiree" to the start of the list
 //        3. Add "Islay" after "Jura" and before "Mull"
 //        4. Print out the index position of "Skye"
+        System.out.println(scottishIslands.indexOf("Skye"));
 //        5. Remove "Tresco" from the list by name
+        scottishIslands.remove("Tresco");
 //        6. Remove "Arran" from the list by index
+//        System.out.println(scottishIslands.indexOf("Arran"));
+        scottishIslands.remove(5);
 //        7. Print the number of islands in your arraylist
+        System.out.println(scottishIslands.size());
 //        8. Sort the list alphabetically
+        
 //        9. Print out all the islands using a for loop
 
         System.out.println(scottishIslands);
