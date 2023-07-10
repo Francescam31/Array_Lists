@@ -33,7 +33,7 @@ public class Runner {
         Collections.sort(scottishIslands);
 //        9. Print out all the islands using a for loop
         for (String island: scottishIslands) {
-            System.out.println(island);            
+            System.out.println(island);
         }
 
         System.out.println(scottishIslands);
@@ -45,13 +45,47 @@ public class Runner {
         System.out.println("numbers: " + numbers);
 
 //        1. Print out a list of the even integers
+        List<Integer> evennums = new ArrayList<>();
+        for(int num : numbers){
+            if(num%2 == 0){
+                evennums.add(num);
+            }
+        }System.out.println(evennums);
 //        2. Print the difference between the largest and smallest value
+        int difference = Collections.max(numbers) - Collections.min(numbers);
+        System.out.println(difference);
 //        3. Print True if the list contains a 1 next to a 1 somewhere.
+        for (Integer i = 0; i < numbers.size(); i++) {
+            if(numbers.get(i) == 1 && numbers.get(i)==numbers.get(i+1)){
+                System.out.println(true);
+            }
+        }
 //        4. Print the sum of the numbers,
+        int sum = 0;
+        for(Integer num : numbers) {
+            sum += num;
+        }
+        System.out.println(sum);
+
 //        5. Print the sum of the numbers...
 //           ...except the number 13 is unlucky, so it does not count...
+        int sum2 = 0;
+        for(Integer num : numbers) {
+            if(num ==13){
+                continue;
+            }
+            sum2 += num;
+        }
+        System.out.println(sum2);
 //           ...and numbers that come immediately after a 13 also do not count.
-//
+        int sum3 = 0;
+        for(Integer num : numbers) {
+            if(num ==13){
+                break;
+            }
+            sum3 += num;
+        }
+        System.out.println(sum3);
 //          So [2, 7, 13, 2] would have sum of 9.
 
     }
