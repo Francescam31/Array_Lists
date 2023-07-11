@@ -18,19 +18,30 @@ public class Runner {
         scottishIslands.add("Coll");
 
 //        1. Add "Coll" to the end of the list
+//        scottishIslands.add("coll");
+
+//        OVERLOADED diff num arguments
+
 //        2. Add "Tiree" to the start of the list
+//        scottishIslands.add(0, "tiree");
 //        3. Add "Islay" after "Jura" and before "Mull"
+//        scottishIslands.add(scottishIslands.indexOf("jura")+1, "islay");
 //        4. Print out the index position of "Skye"
         System.out.println(scottishIslands.indexOf("Skye"));
 //        5. Remove "Tresco" from the list by name
         scottishIslands.remove("Tresco");
+
 //        6. Remove "Arran" from the list by index
 //        System.out.println(scottishIslands.indexOf("Arran"));
         scottishIslands.remove(5);
+
 //        7. Print the number of islands in your arraylist
         System.out.println(scottishIslands.size());
+
 //        8. Sort the list alphabetically
         Collections.sort(scottishIslands);
+        //Destructive method -- changed the array rather than creating new variable
+
 //        9. Print out all the islands using a for loop
         for (String island: scottishIslands) {
             System.out.println(island);
@@ -51,9 +62,11 @@ public class Runner {
                 evennums.add(num);
             }
         }System.out.println(evennums);
+
 //        2. Print the difference between the largest and smallest value
         int difference = Collections.max(numbers) - Collections.min(numbers);
         System.out.println(difference);
+
 //        3. Print True if the list contains a 1 next to a 1 somewhere.
         for (Integer i = 0; i < numbers.size(); i++) {
             if(numbers.get(i) == 1 && numbers.get(i)==numbers.get(i+1)){
@@ -61,7 +74,7 @@ public class Runner {
             }
         }
 //        4. Print the sum of the numbers,
-        int sum = 0;
+        int sum = 0; //accumulator
         for(Integer num : numbers) {
             sum += num;
         }
